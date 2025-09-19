@@ -19,7 +19,7 @@ A modular, secure, and production-ready Django starter kit designed for rapid ba
 
 3. Install Dependencies
 
-    pip install -r requirements.txt
+    pipenv install -r requirements.txt
 
     💡 If you're using WSL and encounter issues with mysqlclient, run:
     sudo apt install default-libmysqlclient-dev build-essential
