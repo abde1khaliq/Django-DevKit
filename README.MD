@@ -133,4 +133,4 @@ who value clarity.
 📄 License
 ------------------------------------------------------------
 
-MIT License. See LICENSE file for details.
+[MIT](https://choosealicense.com/licenses/mit/)
