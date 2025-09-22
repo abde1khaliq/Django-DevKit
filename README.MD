@@ -1,7 +1,7 @@
 Django Starter Kit
 ==================
 
-A modular, secure, and production-ready Django starter kit designed for rapid backend development. Includes support for MySQL or SQLite, environment-based settings, and essential packages for forms, filtering, email, OAuth, and more.
+Django Dev Kit is a modular, secure, and production-ready backend starter built for developers who value clarity, speed, and scalability. Perfect for hackathons, prototyping and production pivots. This kit gets you running in seconds—with no frontend dependencies.
 
 ------------------------------------------------------------
 🚀 Getting Started
@@ -9,24 +9,25 @@ A modular, secure, and production-ready Django starter kit designed for rapid ba
 
 1. Clone the Repository
 ```bash
-    git clone https://github.com/bondo2-hub/django-starter-kit.git
-    cd django-starter-kit
+git clone https://github.com/bondo2-hub/django-starter-kit.git
+cd django-starter-kit
 ```
 
 2. Create a Virtual Environment (Optional)
 ```bash
-    pipenv install
-    pipenv shell
+pipenv install
+pipenv shell
 ```
 
 3. Install Dependencies
 ```bash
-    pipenv install -r requirements.txt
+pipenv install -r requirements.txt
 ```
 
 - 💡 If you're using WSL and encounter issues with mysqlclient, run:
-    sudo apt install default-libmysqlclient-dev build-essential
-
+```bash
+sudo apt install default-libmysqlclient-dev build-essential
+```
 ------------------------------------------------------------
 🔐 Setup
 ------------------------------------------------------------
@@ -35,34 +36,17 @@ No manual steps. Just run:
 
 1. Run the script:
 ```bash
-    python bootstrap.py
+python bootstrap.py
 ```
 **Your dev kit will auto-configure everything—env file, migrations, and more**
 
 Once it's ready, clean the slate and start fresh:
 ```bash
-    rm -rf .git
-    git init
+rm -rf .git
+git init
 ```
 
-# You can now start working!
-------------------------------------------------------------
-🧱 Switching Between Environments
-------------------------------------------------------------
-
-To run your project in different environments (development vs production),
-set the DJANGO_SETTINGS_MODULE variable in both wsgi.py and asgi.py:
-
-```bash
-    # Example for production
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings.production')
-
-    # Example for development
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings.development')
-```
-
-- ⚠️ **Cloud platforms** (Heroku, Railway, Render, etc.) often set this via environment variables.
-Avoid hardcoding assumptions—document clearly and let users configure it per platform.
+# ----- You can now start working! -----
 
 ------------------------------------------------------------
 🧪 Included Packages
@@ -82,29 +66,10 @@ django-phonenumber-field==8.0.0
 django-storages==1.14.4
 ```
 ------------------------------------------------------------
-📦 Deployment Notes
-------------------------------------------------------------
-
-- Use production.py for hardened settings (HTTPS, logging, secure cookies).
-- Configure static and media file serving via Nginx or your cloud provider.
-- Always set DEBUG=False in production and define ALLOWED_HOSTS.
-
-------------------------------------------------------------
-🧠 Philosophy
-------------------------------------------------------------
-
-This starter kit reflects a backend philosophy focused on:
-
-- 🔒 Security-first architecture
-- 🧼 Clean, reproducible environments
-- 🧩 Modular design for real-world scalability
-- 🧠 Developer clarity and onboarding speed
-
-------------------------------------------------------------
 🤝 Contributing
 ------------------------------------------------------------
 
-Feel free to fork, extend, or submit pull requests. This kit is built for backend engineers
+Feel free to fork, extend this kit, or submit pull requests. This kit is built for backend engineers
 who value clarity.
 
 ------------------------------------------------------------
