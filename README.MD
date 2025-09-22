@@ -28,46 +28,24 @@ A modular, secure, and production-ready Django starter kit designed for rapid ba
     sudo apt install default-libmysqlclient-dev build-essential
 
 ------------------------------------------------------------
-🔐 Secret Key Setup
+🔐 Setup
 ------------------------------------------------------------
 
-*Every Django project requires a unique SECRET_KEY for cryptographic operations like session signing and CSRF protection.*
+No manual steps. Just run:
 
-Steps to Generate Your Secret Key:
-
-1. Run the key generator script:
+1. Run the script:
 ```bash
-    cd base/management
-    python generate_secret_key.py
+    python bootstrap.py
 ```
+**Your dev kit will auto-configure everything—env file, migrations, and more**
 
-2. Copy the output into your `.env` file:
+Once it's ready, clean the slate and start fresh:
 ```bash
-    SECRET_KEY=your-generated-key-here
+    rm -rf .git
+    git init
 ```
-⚠️ Important: Never commit your .env file or share your secret key publicly.
 
-------------------------------------------------------------
-🧰 Environment Configuration
-------------------------------------------------------------
-
-Use the .env file to configure your project:
-```python
-    # Core settings
-    SECRET_KEY=your-generated-key
-    DEBUG=False
-    ALLOWED_HOSTS=127.0.0.1,localhost
-
-    # Database engine: 'mysql' or 'sqlite'
-    DB_ENGINE=mysql
-
-    # MySQL credentials (only needed if DB_ENGINE=mysql)
-    DB_NAME=your_db_name
-    DB_USER=your_db_user
-    DB_PASSWORD=your_db_password
-    DB_HOST=localhost
-    DB_PORT=3306
-```
+# You can now start working!
 ------------------------------------------------------------
 🧱 Switching Between Environments
 ------------------------------------------------------------
