@@ -8,42 +8,43 @@ A modular, secure, and production-ready Django starter kit designed for rapid ba
 ------------------------------------------------------------
 
 1. Clone the Repository
-
+```bash
     git clone https://github.com/bondo2-hub/django-starter-kit.git
     cd django-starter-kit
+```
 
 2. Create a Virtual Environment (Optional)
-
+```bash
     pipenv install
     pipenv shell
+```
 
 3. Install Dependencies
-
+```bash
     pipenv install -r requirements.txt
+```
 
-    💡 If you're using WSL and encounter issues with mysqlclient, run:
+- 💡 If you're using WSL and encounter issues with mysqlclient, run:
     sudo apt install default-libmysqlclient-dev build-essential
 
 ------------------------------------------------------------
 🔐 Secret Key Setup
 ------------------------------------------------------------
 
-Every Django project requires a unique SECRET_KEY for cryptographic operations like session signing and CSRF protection.
+*Every Django project requires a unique SECRET_KEY for cryptographic operations like session signing and CSRF protection.*
 
 Steps to Generate Your Secret Key:
 
 1. Run the key generator script:
-
+```bash
     cd base/management
     python generate_secret_key.py
+```
 
-    cd base/management
-    python3 generate_secret_key.py
-
-2. Copy the output into your .env file:
-
+2. Copy the output into your `.env` file:
+```bash
     SECRET_KEY=your-generated-key-here
-
+```
 ⚠️ Important: Never commit your .env file or share your secret key publicly.
 
 ------------------------------------------------------------
@@ -51,7 +52,7 @@ Steps to Generate Your Secret Key:
 ------------------------------------------------------------
 
 Use the .env file to configure your project:
-
+```python
     # Core settings
     SECRET_KEY=your-generated-key
     DEBUG=False
@@ -66,7 +67,7 @@ Use the .env file to configure your project:
     DB_PASSWORD=your_db_password
     DB_HOST=localhost
     DB_PORT=3306
-
+```
 ------------------------------------------------------------
 🧱 Switching Between Environments
 ------------------------------------------------------------
@@ -74,19 +75,21 @@ Use the .env file to configure your project:
 To run your project in different environments (development vs production),
 set the DJANGO_SETTINGS_MODULE variable in both wsgi.py and asgi.py:
 
+```bash
     # Example for production
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings.production')
 
     # Example for development
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings.development')
+```
 
-⚠️ Cloud platforms (Heroku, Railway, Render, etc.) often set this via environment variables.
+- ⚠️ **Cloud platforms** (Heroku, Railway, Render, etc.) often set this via environment variables.
 Avoid hardcoding assumptions—document clearly and let users configure it per platform.
 
 ------------------------------------------------------------
 🧪 Included Packages
 ------------------------------------------------------------
-
+```bash
 Django==5.1.3
 mysqlclient
 django-anymail==12.0
@@ -99,7 +102,7 @@ django-formtools==2.5.1
 django-oauth-toolkit==3.0.1
 django-phonenumber-field==8.0.0
 django-storages==1.14.4
-
+```
 ------------------------------------------------------------
 📦 Deployment Notes
 ------------------------------------------------------------
@@ -130,4 +133,4 @@ who value clarity.
 📄 License
 ------------------------------------------------------------
 
-MIT License. See LICENSE file for details.
+[MIT](https://choosealicense.com/licenses/mit/)
