@@ -71,9 +71,3 @@ django-storages==1.14.4
 
 Feel free to fork, extend this kit, or submit pull requests. This kit is built for backend engineers
 who value clarity.
-
-------------------------------------------------------------
-📄 License
-------------------------------------------------------------
-
-[MIT](https://choosealicense.com/licenses/mit/)
